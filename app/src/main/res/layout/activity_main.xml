@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_layout"
     android:layout_width="match_parent"
@@ -77,70 +78,27 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content">
             <ImageButton
+
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@mipmap/ic_project_list"/>
-            <TextView
+
+            <Button
+                android:id="@+id/project_list"
+                style="@android:style/Widget.Button"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
                 android:gravity="center"
+                android:text="Projects"
                 android:textColor="@android:color/black"
-                android:text="Projects"/>
+                app:backgroundTint="#FFFFFF" />
 
         </LinearLayout>
 
     </LinearLayout>
 
 
-    <LinearLayout
-        android:id="@+id/list_view"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="540dp"
-        android:orientation="horizontal">
 
-        <ScrollView
-
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:layout_weight="1">
-
-            <LinearLayout
-                android:id="@+id/list"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-
-        </ScrollView>
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/detail"
-        android:visibility="gone"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@android:color/black"
-        >
-
-        <!--android:background="@android:color/background_dark"-->
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="@dimen/items_horizontal_margin"
-            android:text="@string/moreinfoheader"
-            android:textSize="@dimen/header_text_size"
-            android:textColor="@android:color/black"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="@dimen/items_horizontal_margin"
-            android:text="@string/moreinfo"
-            android:textColor="@android:color/black"
-            />
-
-    </LinearLayout>
 
 </RelativeLayout>

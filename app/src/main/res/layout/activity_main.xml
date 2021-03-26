@@ -1,71 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+    android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".MainActivity">
 
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/holo_blue_light">
+        <ImageButton
+            android:orientation="horizontal"
+            android:id="@+id/settings"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/ic_settings"/>
+
+        <EditText
+            android:layout_width="10dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="0.7"
+            android:gravity="right"
+            android:inputType="text"
+            android:orientation="horizontal"
+            android:paddingRight="0dp" />
+
+    </LinearLayout>
+
     <ImageView
+        android:layout_marginTop="50dp"
         android:layout_alignParentTop="true"
         android:background="@drawable/ic_background_image"
         android:layout_width="match_parent"
         android:layout_height="300dp" />
 
+
     <LinearLayout
-        android:layout_marginTop="300dp"
-        android:orientation="vertical"
+        android:layout_marginTop="400dp"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:gravity="center"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content">
-                <ImageButton
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:background="@mipmap/ic_add_project"/>
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Create new project"
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:gravity="center"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content">
-                <ImageButton
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:background="@mipmap/ic_project_list"/>
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Projects"/>
-            </LinearLayout>
-        </LinearLayout>
-        <ImageButton
-            android:layout_marginTop="25dp"
-            android:layout_gravity="center"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@mipmap/ic_settings"/>
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:gravity="center"
-            android:text="Settings"/>
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/add_project"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@mipmap/ic_add_project"/>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:text="Create new project"
+                />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@mipmap/ic_project_list"/>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:text="Projects"/>
+
+        </LinearLayout>
+
     </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="540dp"
+        android:orientation="horizontal">
+
+        <ScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/detail"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/black"
+        >
+
+        <!--android:background="@android:color/background_dark"-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/items_horizontal_margin"
+            android:text="@string/moreinfoheader"
+            android:textSize="@dimen/header_text_size"
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/items_horizontal_margin"
+            android:text="@string/moreinfo"
+            android:textColor="@android:color/black"
+            />
+
+    </LinearLayout>
+
 </RelativeLayout>

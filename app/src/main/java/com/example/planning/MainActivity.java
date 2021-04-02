@@ -19,6 +19,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.Vector;
@@ -26,22 +27,37 @@ import java.util.Vector;
 public class MainActivity extends AppCompatActivity{
 
 
-    private Button project_list;
+    private ImageButton project_list;
+    private ImageButton create_project;
 
-    ViewGroup m_my_list;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        project_list = (Button) findViewById(R.id.project_list);
+        //If pressed Create new project
+        create_project = (ImageButton) findViewById(R.id.project_list);
+
+        create_project.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                createProject();
+            }
+        });
+        //If pressed Project list button
+        project_list = (ImageButton) findViewById(R.id.project_list);
+
         project_list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openProjectList();
             }
         });
+    }
+
+    public void createProject(){
+        
     }
 
     public void openProjectList(){

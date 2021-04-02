@@ -61,10 +61,13 @@
                 android:layout_height="100dp"
                 android:background="@mipmap/ic_add_project"/>
             <TextView
+                style="@android:style/Widget.Button"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
                 android:gravity="center"
                 android:textColor="@android:color/black"
+                app:backgroundTint="#FFFFFF"
                 android:text="Create new project"
                 />
         </LinearLayout>
@@ -79,12 +82,13 @@
             android:layout_height="wrap_content">
             <ImageButton
 
+                android:id="@+id/project_list"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@mipmap/ic_project_list"/>
 
-            <Button
-                android:id="@+id/project_list"
+            <TextView
+
                 style="@android:style/Widget.Button"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"

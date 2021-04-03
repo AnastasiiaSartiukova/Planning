@@ -28,15 +28,15 @@ public class LogIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
 
-        etEmail = (EditText) findViewById(R.id.etEmail);
-        etPassword = (EditText) findViewById(R.id.etPassword);
+        etEmail = (EditText) findViewById(R.id.editTextEmail);
+        etPassword = (EditText) findViewById(R.id.editTextPassword);
 
         db_helper = new DatabaseHelper(this);
         ContentValues contentValues = new ContentValues();
         SQLiteDatabase db = db_helper.getWritableDatabase();
 
         //If pressed LogIn
-        log_in = (Button) findViewById(R.id.log_in);
+        log_in = (Button) findViewById(R.id.cirLoginButton);
 
         log_in.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,7 +79,7 @@ public class LogIn extends AppCompatActivity {
         });
 
         //If pressed Registration
-        register = (Button) findViewById(R.id.register);
+        register = (Button) findViewById(R.id.cirRegButton);
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,7 +98,7 @@ public class LogIn extends AppCompatActivity {
         });
 
         //If pressed Read
-        read_db = (Button) findViewById(R.id.read_db);
+        read_db = (Button) findViewById(R.id.cirReadButton);
 
         read_db.setOnClickListener(new View.OnClickListener() {
             @Override

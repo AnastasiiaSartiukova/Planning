@@ -53,9 +53,23 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/loginViewsMargin"/>
 
+        <Button
+            android:id="@+id/cirRegButton"
+            style="@style/loginButton"
+            android:text="Registration"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/loginViewsMargin"/>
+
+        <Button
+            android:id="@+id/cirReadButton"
+            style="@style/loginButton"
+            android:text="Read"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/loginViewsMargin"/>
+
         <TextView
             style="@style/parent"
-            android:textAlignment="center"
+            android:gravity="center"
             android:textStyle="bold"
             android:textColor="@color/primaryTextColor"
             android:text="@string/login_signup_hint"

@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity{
 
     private ImageButton project_list;
     private ImageButton create_project;
+    private ImageButton shared_project;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -36,8 +37,10 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         //If pressed Create new project
-        create_project = (ImageButton) findViewById(R.id.project_list);
+        create_project = (ImageButton) findViewById(R.id.add_project);
 
         create_project.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +48,9 @@ public class MainActivity extends AppCompatActivity{
                 createProject();
             }
         });
+
+
+
         //If pressed Project list button
         project_list = (ImageButton) findViewById(R.id.project_list);
 
@@ -54,14 +60,31 @@ public class MainActivity extends AppCompatActivity{
                 openProjectList();
             }
         });
+
+
+
+        //If pressed shared project button
+        shared_project = (ImageButton) findViewById(R.id.shared_project);
+
+        shared_project.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { openLogIn();}
+        });
+
     }
 
     public void createProject(){
-        
+        Intent intent = new Intent(this, CreateProjectActivity.class);
+        startActivity(intent);
     }
 
     public void openProjectList(){
         Intent intent = new Intent(this, ProjectListActivity.class);
+        startActivity(intent);
+    }
+
+    public void openLogIn(){
+        Intent intent = new Intent(this, LogIn.class);
         startActivity(intent);
     }
 

@@ -22,15 +22,6 @@
             android:layout_height="30dp"
             android:background="@mipmap/ic_settings"/>
 
-        <EditText
-            android:layout_width="10dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="15dp"
-            android:layout_weight="0.7"
-            android:gravity="right"
-            android:inputType="text"
-            android:orientation="horizontal"
-            android:paddingRight="0dp" />
 
     </LinearLayout>
 

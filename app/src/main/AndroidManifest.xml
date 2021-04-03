@@ -9,6 +9,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Planning">
+
+
+        <activity
+            android:name=".CreateProjectActivity"
+            android:label="CreateProjectActivity"
+            android:theme="@style/Theme.Planning.NoActionBar">
+            <intent-filter>
+                <action android:name=".CreateProjectActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".LogIn"
+            android:label="LogIn"
+            android:theme="@style/Theme.Planning.NoActionBar">
+            <intent-filter>
+                <action android:name=".LogIn" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
         <activity
             android:name=".ProjectListActivity"
             android:label="@string/title_activity_project_list"
@@ -19,6 +45,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -29,6 +57,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
     </application>
 
 </manifest>

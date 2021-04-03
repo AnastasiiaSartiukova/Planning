@@ -23,15 +23,6 @@
             android:layout_height="30dp"
             android:background="@mipmap/ic_settings"/>
 
-        <EditText
-            android:layout_width="10dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="15dp"
-            android:layout_weight="0.7"
-            android:gravity="right"
-            android:inputType="text"
-            android:orientation="horizontal"
-            android:paddingRight="0dp" />
 
     </LinearLayout>
 
@@ -102,7 +93,36 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_marginTop="570dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/shared_project"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@mipmap/ic_share"/>
+            <TextView
+                style="@android:style/Widget.Button"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                app:backgroundTint="#FFFFFF"
+                android:text="Shared project"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
 
 
 </RelativeLayout>
